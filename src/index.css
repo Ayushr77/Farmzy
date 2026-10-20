@@ -1,0 +1,1537 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+body {
+  background: #e9ece5;
+  color: #1f2a1f;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =====================================
+   MAIN SCREEN WRAPPER & RESPONSIVENESS
+===================================== */
+
+.screen {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  transition: max-width 0.3s ease;
+}
+
+/* Desktop & Tablet Display (Adjusts for large screens) */
+@media (min-width: 768px) {
+  .screen {
+    max-width: 768px;
+    min-height: 92vh;
+    margin: 30px auto;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+
+  .bottomNav {
+    max-width: 768px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+}
+
+/* =====================================
+   LANGUAGE SCREEN
+===================================== */
+
+.screen {
+  background: linear-gradient(
+    180deg,
+    #2e7d32 45%,
+    #f5f5f0 45%
+  );
+}
+
+.hero {
+  text-align: center;
+  color: white;
+  padding-top: 70px;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 60px;
+}
+
+.hero h1 {
+  margin-top: 18px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 8px;
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.card {
+  margin-top: 55px;
+
+  background: #f5f5f0;
+
+  border-radius: 28px 28px 0 0;
+
+  padding: 28px 24px;
+
+  min-height: 420px;
+}
+
+.card h2 {
+  font-size: 23px;
+}
+
+.sub {
+  color: #666;
+  margin: 10px 0 22px;
+  line-height: 1.5;
+}
+
+.language {
+  width: 100%;
+
+  padding: 16px;
+
+  margin-bottom: 12px;
+
+  border: 1px solid #e2e5df;
+
+  border-radius: 14px;
+
+  background: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+.language:hover {
+  transform: translateY(-2px);
+}
+
+.language.active {
+  background: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+  font-weight: 600;
+}
+
+.continueBtn {
+  width: 100%;
+
+  padding: 16px;
+
+  margin-top: 16px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background: #1b5e20;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.continueBtn:hover {
+  background: #164d1a;
+}
+
+
+/* =====================================
+   ROLE SCREEN
+===================================== */
+
+.roleScreen {
+  min-height: 100vh;
+  background: #f5f5f0;
+}
+
+.roleHeader {
+  position: relative;
+
+  background: #2e7d32;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 38px 24px 42px;
+
+  border-radius: 0 0 30px 30px;
+}
+
+.iconBack {
+  position: absolute;
+
+  left: 20px;
+  top: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-size: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallLogo {
+  width: 72px;
+  height: 72px;
+
+  margin: 5px auto 12px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+}
+
+.roleHeader h1 {
+  font-size: 30px;
+}
+
+.roleHeader p {
+  margin-top: 20px;
+
+  font-size: 23px;
+
+  font-weight: 600;
+}
+
+.roleSubtitle {
+  display: block;
+
+  margin-top: 8px;
+
+  opacity: 0.85;
+
+  font-size: 14px;
+}
+
+.roleContainer {
+  padding: 28px 20px;
+}
+
+
+/* Role Cards */
+
+.roleCard {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  border: 1px solid #e0e4dc;
+
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  text-align: left;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+
+  color: #1f2a1f;
+}
+
+.roleCard:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.roleCard:active {
+  transform: scale(0.98);
+}
+
+
+/* Role Icon */
+
+.roleIcon {
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+
+  margin-right: 16px;
+}
+
+.farmerIcon {
+  background: #e5f1df;
+}
+
+.ownerIcon {
+  background: #f1e9d9;
+}
+
+
+/* Role Text */
+
+.roleContent {
+  flex: 1;
+}
+
+.roleContent h2 {
+  font-size: 19px;
+
+  margin-bottom: 7px;
+}
+
+.roleContent p {
+  color: #6a7068;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  padding-right: 8px;
+}
+
+
+/* Arrow */
+
+.roleArrow {
+  font-size: 26px;
+
+  color: #2e7d32;
+
+  margin-left: 8px;
+}
+
+
+/* Back */
+
+.backBtn {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #dfe9dc;
+
+  color: #245b28;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  margin-top: 8px;
+}
+
+
+/* =====================================
+   LOGIN SCREEN
+===================================== */
+
+.loginScreen {
+  min-height: 100vh;
+  background: #f5f5f0;
+}
+
+.loginHeader {
+  position: relative;
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 28px 24px 38px;
+  border-radius: 0 0 30px 30px;
+}
+
+.loginLogo {
+  width: 86px;
+  height: 86px;
+
+  margin: 8px auto 12px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+}
+
+.loginHeader h1 {
+  font-size: 30px;
+}
+
+.loginHeader p {
+  margin-top: 7px;
+  opacity: 0.9;
+}
+
+.loginCard {
+  margin: 22px 16px 0;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 26px 22px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.loginIntro {
+  margin-bottom: 24px;
+}
+
+.welcomeBadge {
+  display: inline-block;
+
+  background: #e7f2e3;
+
+  color: #2e7d32;
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+.loginIntro h2 {
+  font-size: 24px;
+
+  margin-bottom: 7px;
+}
+
+.label {
+  display: block;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.phoneBox {
+  display: flex;
+
+  align-items: center;
+
+  height: 56px;
+
+  border: 1px solid #dfe4dc;
+
+  border-radius: 14px;
+
+  padding: 0 14px;
+
+  background: #fafbf9;
+
+  transition: 0.2s;
+}
+
+.phoneBox:focus-within {
+  border-color: #2e7d32;
+
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.countryCode {
+  font-weight: 600;
+
+  color: #333;
+}
+
+.divider {
+  width: 1px;
+
+  height: 25px;
+
+  background: #d8ddd5;
+
+  margin: 0 12px;
+}
+
+.phoneBox input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 16px;
+
+  color: #222;
+}
+
+.phoneBox input::placeholder {
+  color: #999;
+}
+
+.errorText {
+  margin-top: 8px;
+
+  color: #c62828;
+
+  font-size: 12px;
+}
+
+.successText {
+  margin-top: 8px;
+
+  color: #2e7d32;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.continueBtn:not(:disabled):hover {
+  background: #174f1b;
+
+  transform: translateY(-1px);
+}
+
+.continueBtn:disabled {
+  background: #c6cec4;
+
+  color: #ffffff;
+
+  cursor: not-allowed;
+
+  opacity: 0.8;
+}
+
+.securityNote {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-top: 22px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: #f5f7f3;
+}
+
+.securityNote span {
+  font-size: 16px;
+}
+
+.securityNote p {
+  color: #70756d;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================
+   OTP SCREEN
+===================================== */
+
+.otpScreen {
+  min-height: 100vh;
+  background: #f5f5f0;
+}
+
+.otpHeader {
+  position: relative;
+
+  background: #2e7d32;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 28px 24px 38px;
+
+  border-radius: 0 0 30px 30px;
+}
+
+.otpLogo {
+  width: 80px;
+  height: 80px;
+
+  margin: 8px auto 14px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+.otpHeader h1 {
+  font-size: 25px;
+}
+
+.otpHeader p {
+  margin-top: 7px;
+  opacity: 0.9;
+}
+
+.otpCard {
+  margin: 22px 16px 0;
+
+  padding: 28px 22px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.otpCard h2 {
+  font-size: 23px;
+}
+
+.otpDescription {
+  color: #777;
+
+  font-size: 14px;
+
+  margin-top: 10px;
+}
+
+.phoneDisplay {
+  margin-top: 8px;
+
+  font-weight: 600;
+
+  color: #2e7d32;
+}
+
+.otpInput {
+  width: 100%;
+
+  height: 60px;
+
+  margin-top: 25px;
+
+  border: 1px solid #dfe4dc;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  font-size: 26px;
+
+  letter-spacing: 10px;
+
+  outline: none;
+}
+
+.otpInput:focus {
+  border-color: #2e7d32;
+
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.resendBtn {
+  margin-top: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #2e7d32;
+
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+
+/* =====================================
+   DASHBOARD
+===================================== */
+
+.dashboard {
+  min-height: 100vh;
+  background: #f5f5f0;
+  padding-bottom: 80px;
+}
+
+.dashboardHeader {
+  background: #2e7d32;
+  color: white;
+
+  padding: 28px 20px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 0 0 28px 28px;
+}
+
+.greeting {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.dashboardHeader h1 {
+  margin-top: 6px;
+  font-size: 23px;
+}
+
+.notificationBtn {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.15);
+
+  font-size: 20px;
+}
+
+
+/* SEARCH */
+
+.searchSection {
+  padding: 18px 18px 5px;
+}
+
+.searchBox {
+  height: 52px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+
+  gap: 10px;
+
+  box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+
+  flex: 1;
+
+  font-size: 14px;
+}
+
+
+/* SECTIONS */
+
+.dashboardSection {
+  padding: 18px;
+}
+
+.sectionTitle {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+.sectionTitle h2 {
+  font-size: 19px;
+}
+
+.sectionTitle button {
+  border: none;
+
+  background: none;
+
+  color: #2e7d32;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* CATEGORIES */
+
+.categoryRow {
+  display: flex;
+
+  gap: 12px;
+
+  overflow-x: auto;
+
+  padding-bottom: 5px;
+}
+
+.categoryCard {
+  min-width: 82px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 14px 8px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.categoryCard span {
+  font-size: 30px;
+}
+
+.categoryCard p {
+  margin-top: 8px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* EQUIPMENT */
+
+.equipmentCard {
+  background: white;
+
+  border-radius: 19px;
+
+  padding: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 14px;
+
+  box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+}
+
+.equipmentImage {
+  width: 92px;
+  height: 92px;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background: #e8efe5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+
+  overflow: hidden;
+}
+
+.equipmentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equipmentInfo {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 4px;
+}
+
+.availableBadge {
+  font-size: 10px;
+
+  color: #2e7d32;
+
+  font-weight: 600;
+}
+
+.equipmentInfo h3 {
+  font-size: 15px;
+
+  margin: 2px 0;
+}
+
+.location {
+  color: #777;
+
+  font-size: 11px;
+}
+
+.equipmentBottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 6px;
+}
+
+.equipmentBottom strong {
+  font-size: 16px;
+}
+
+.equipmentBottom small {
+  font-size: 10px;
+
+  color: #777;
+
+  font-weight: normal;
+}
+
+.rating {
+  font-size: 11px;
+}
+
+
+/* OWNER EARNINGS */
+
+.earningsCard {
+  margin: 18px;
+
+  padding: 22px;
+
+  background: #1b5e20;
+
+  color: white;
+
+  border-radius: 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.earningsCard span {
+  font-size: 12px;
+
+  opacity: 0.8;
+}
+
+.earningsCard h2 {
+  margin-top: 7px;
+
+  font-size: 28px;
+}
+
+.earningsCard p {
+  margin-top: 5px;
+
+  font-size: 11px;
+}
+
+.earningsIcon {
+  font-size: 40px;
+}
+
+
+/* OWNER ACTIONS */
+
+.ownerActions {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.ownerAction {
+  border: none;
+
+  background: white;
+
+  border-radius: 17px;
+
+  padding: 15px 7px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.ownerAction span {
+  font-size: 25px;
+}
+
+.ownerAction p {
+  margin-top: 8px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* BOTTOM NAV */
+
+.bottomNav {
+  position: fixed;
+
+  bottom: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  max-width: 100%;
+
+  height: 68px;
+
+  background: white;
+
+  border-top: 1px solid #e4e7e1;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+  z-index: 10;
+}
+
+.navItem {
+  border: none;
+
+  background: none;
+
+  color: #777;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 4px;
+
+  font-size: 19px;
+}
+
+.navItem span {
+  font-size: 10px;
+}
+
+.navItem.active {
+  color: #2e7d32;
+
+  font-weight: 600;
+}
+
+
+/* Equipment Details */
+
+.detailsScreen{
+  min-height:100vh;
+  background:#F5F5F0;
+}
+
+.detailsImage{
+  height:280px;
+  background:#DDE8D8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:110px;
+  position:relative;
+}
+
+.detailsBack{
+  position:absolute;
+  top:18px;
+  left:18px;
+}
+
+.detailsCard{
+  margin-top:-20px;
+  background:white;
+  border-radius:28px 28px 0 0;
+  padding:24px;
+}
+
+.priceRow{
+  display:flex;
+  align-items:end;
+  gap:6px;
+  margin:10px 0 20px;
+}
+
+.priceRow h2{
+  font-size:34px;
+  color:#1B5E20;
+}
+
+.infoGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-bottom:22px;
+}
+
+.infoBox{
+  background:#F4F7F3;
+  border-radius:14px;
+  padding:14px;
+  text-align:center;
+}
+
+.infoBox strong{
+  display:block;
+  margin-top:6px;
+}
+
+.ownerCard{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:#F8F8F6;
+  border-radius:16px;
+  padding:14px;
+  margin:10px 0 20px;
+}
+
+.ownerAvatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#E6F2E3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.description{
+  color:#666;
+  line-height:1.6;
+  margin:10px 0 22px;
+}
+
+.callBtn{
+  width:100%;
+  height:52px;
+  border:2px solid #2E7D32;
+  background:white;
+  color:#2E7D32;
+  border-radius:14px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+
+/* Booking Screen */
+
+.bookingScreen{
+  min-height:100vh;
+  background:#F5F5F0;
+}
+
+.bookingHeader{
+  background:#2E7D32;
+  color:white;
+  padding:24px;
+  position:relative;
+  text-align:center;
+  border-radius:0 0 24px 24px;
+}
+
+.bookingCard{
+  background:white;
+  margin:20px;
+  padding:22px;
+  border-radius:22px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.priceTag{
+  color:#2E7D32;
+  font-weight:600;
+  margin:6px 0 20px;
+}
+
+.dateInput{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.daySelector{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:24px;
+  margin-bottom:24px;
+}
+
+.daySelector button{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#2E7D32;
+  color:white;
+  font-size:22px;
+}
+
+.daySelector span{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.summary{
+  display:flex;
+  justify-content:space-between;
+  background:#F4F7F3;
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+
+.agreement{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin-bottom:22px;
+  font-size:14px;
+}
+
+
+/* Agreement */
+
+.agreementScreen{
+  min-height:100vh;
+  background:#F5F5F0;
+}
+
+.agreementHeader{
+  background:#2E7D32;
+  color:white;
+  text-align:center;
+  padding:30px 20px 36px;
+}
+
+.successIcon{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  margin:0 auto 14px;
+}
+
+.agreementCard{
+  margin:20px;
+  background:white;
+  border-radius:20px;
+  padding:22px;
+}
+
+.bookingId{
+  background:#E8F5E9;
+  color:#2E7D32;
+  padding:10px;
+  border-radius:10px;
+  text-align:center;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  margin:12px 0;
+}
+
+.agreementText{
+  color:#666;
+  line-height:1.6;
+  margin:12px 0 20px;
+}
+
+.signatureBox{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:24px;
+}
+
+.line{
+  width:120px;
+  border-bottom:1px solid #444;
+  margin-top:24px;
+}
+
+.secondaryBtn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:#E8F5E9;
+  color:#2E7D32;
+  font-weight:600;
+  margin-top:12px;
+}
+
+
+/* Add Equipment */
+
+.addScreen{
+  min-height:100vh;
+  background:#F5F5F0;
+}
+
+.addHeader{
+  background:#2E7D32;
+  color:white;
+  padding:28px 22px;
+  border-radius:0 0 24px 24px;
+}
+
+.addCard{
+  background:white;
+  margin:20px;
+  padding:22px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.addCard label{
+  display:block;
+  margin-top:14px;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.addCard input,
+.addCard select{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  font-size:15px;
+}
+
+
+/* =========================
+   GLOBAL BACK BUTTON
+   ========================= */
+
+.globalBackButton {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+
+  z-index: 1000;
+
+  border: none;
+  background: white;
+
+  color: #2e7d32;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  transition: 0.2s ease;
+}
+
+.globalBackButton:hover {
+  transform: translateX(-2px);
+}
+
+.globalBackButton:active {
+  transform: scale(0.96);
+}
+
+/* ==========================================
+   Responsive & Fluid Layout Fixes for Farmzy
+   ========================================== */
+
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 90px;
+}
+
+.dashboardSection {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .equipmentGrid, .listingsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+}
+
+.bottomNav, .mobileNavBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+
+@media (min-width: 1024px) {
+  .bottomNav, .mobileNavBar {
+    max-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ==========================================================
+   Non-Invasive Responsive Fixes (Preserves Current UI/Theme)
+   ================================================---------- */
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+}
+
+@media (min-width: 1024px) {
+  div[style*="position: fixed"], .bottomNav, .mobileNavBar {
+    max-width: 600px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+}
